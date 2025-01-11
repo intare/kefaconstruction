@@ -4,7 +4,7 @@ export function ServicesHero() {
       <div className="container">
         <div className="space-y-2">
           <p className="text-sm font-medium text-muted-foreground">
-            SMC2 > SERVICES
+            SERVICES
           </p>
           <h1 className="text-4xl font-bold tracking-tight">
             ALL SERVICES
