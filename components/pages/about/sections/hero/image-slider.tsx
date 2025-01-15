@@ -7,19 +7,19 @@ import { Button } from "@/components/ui/button"
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80",
+    src: "/gallery/southsudan/s1.jpg?auto=format&fit=crop&w=1920&q=80",
     alt: "Construction team reviewing plans"
   },
   {
-    src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=80",
+    src: "/gallery/southsudan/k1.jpg?auto=format&fit=crop&w=1920&q=80",
     alt: "Construction site aerial view"
   },
   {
-    src: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80",
+    src: "/gallery/southsudan/s4.jpg?auto=format&fit=crop&w=1920&q=80",
     alt: "Construction workers on site"
   },
   {
-    src: "https://images.unsplash.com/photo-1628744876497-eb30460be9f6?auto=format&fit=crop&w=1920&q=80",
+    src: "/gallery/southsudan/gymnasiumd.jpeg?auto=format&fit=crop&w=1920&q=80",
     alt: "Construction project progress"
   }
 ]

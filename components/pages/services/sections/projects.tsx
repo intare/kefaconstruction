@@ -9,42 +9,42 @@ const categories = ["ALL", "CONSTRUCTION", "RENOVATION", "OUTDOOR", "INTERIORS",
 
 const projects = [
   {
-    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1920&q=80",
+    image: "/gallery/southsudan/s1.jpg?auto=format&fit=crop&w=1920&q=80",
     category: "CONSTRUCTION",
     title: "Modern Office Building"
   },
   {
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80",
+    image: "/gallery/southsudan/k1.jpg?auto=format&fit=crop&w=1920&q=80",
     category: "CONSTRUCTION",
     title: "Corporate Headquarters"
   },
   {
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80",
+    image: "/gallery/southsudan/k2.jpg?auto=format&fit=crop&w=1920&q=80",
     category: "RENOVATION",
     title: "Historic Building Renovation"
   },
   {
-    image: "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=1920&q=80",
+    image: "/gallery/southsudan/k3.jpg?auto=format&fit=crop&w=1920&q=80",
     category: "OUTDOOR",
     title: "Urban Park Development"
   },
   {
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=80",
+    image: "/gallery/southsudan/s2.jpg?auto=format&fit=crop&w=1920&q=80",
     category: "INTERIORS",
     title: "Modern Office Interior"
   },
   {
-    image: "https://images.unsplash.com/photo-1485627941502-d2e6429a8af0?auto=format&fit=crop&w=1920&q=80",
+    image: "/gallery/southsudan/swimingk2.jpg?auto=format&fit=crop&w=1920&q=80",
     category: "CONSULTING",
     title: "Project Planning"
   },
   {
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80",
+    image: "/gallery/southsudan/k17.jpg?auto=format&fit=crop&w=1920&q=80",
     category: "CONSTRUCTION",
     title: "Infrastructure Development"
   },
   {
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920&q=80",
+    image: "/gallery/southsudan/swim-k1.jpg?auto=format&fit=crop&w=1920&q=80",
     category: "OUTDOOR",
     title: "Landscape Design"
   }

@@ -10,8 +10,6 @@ export function ServicesPage() {
     <main className="relative">
       <ServicesHero />
       <ServicesGrid />
-      <ServicesBrochure />
-      <ServicesExperience />
       <ServicesProjects />
     </main>
   )

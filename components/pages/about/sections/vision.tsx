@@ -7,7 +7,7 @@ export function AboutVision() {
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
             <Image
-              src="https://images.unsplash.com/photo-1571053748382-141b7de59b88?q=80&w=1920&auto=format&fit=crop"
+              src="/team.jpg?q=80&w=1920&auto=format&fit=crop"
               alt="Modern sports facility"
               fill
               className="object-cover transition-transform duration-500 hover:scale-105"
@@ -26,10 +26,7 @@ export function AboutVision() {
               </h2>
             </div>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              We envision a future where every community has access to world-class sports 
-              facilities that promote health, wellness, and athletic achievement. Our 
-              commitment to innovation and sustainability drives us to create spaces that 
-              not only meet today&apos;s needs but anticipate tomorrow&apos;s challenges.
+            KefaSports Ltd offers a full range of sports facilities construction services from customizing basketball courts, swimming pools, playgrounds and soccer fields to building basketball arenas. We are a highly client-focused company that prioritizes quality and attention to detail to ensure our clients get the best service possible.
             </p>
           </div>
         </div>

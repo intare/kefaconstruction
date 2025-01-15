@@ -37,7 +37,7 @@ export function AboutHero() {
             Home
           </Link>
           <ChevronRight className="h-4 w-4 text-muted-foreground" />
-          <span className="text-muted-foreground">About Us 2</span>
+          <span className="text-muted-foreground">About Us</span>
         </div>
 
         <div className="grid gap-12 lg:grid-cols-2">
