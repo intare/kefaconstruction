@@ -1,10 +1,11 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useCallback } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
+import { useMediaQuery } from "@/hooks/use-media-query"
 
 const clients = [
   {
@@ -49,26 +50,27 @@ const clients = [
   }
 ]
 
-const VISIBLE_SLIDES = 5
-
 export function ClientsSlider() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isHovered, setIsHovered] = useState(false)
+  const isMobile = useMediaQuery("(max-width: 768px)")
+  
+  const VISIBLE_SLIDES = isMobile ? 2 : 5
 
-  const showPrev = () => {
+  const showPrev = useCallback(() => {
     setCurrentIndex((prev) => (prev === 0 ? clients.length - 1 : prev - 1))
-  }
+  }, [])
 
-  const showNext = () => {
+  const showNext = useCallback(() => {
     setCurrentIndex((prev) => (prev === clients.length - 1 ? 0 : prev + 1))
-  }
+  }, [])
 
   useEffect(() => {
     if (!isHovered) {
       const timer = setInterval(showNext, 4000)
       return () => clearInterval(timer)
     }
-  }, [isHovered])
+  }, [isHovered, showNext])
 
   // Create a circular array for infinite scrolling
   const visibleClients = [...clients, ...clients].slice(
@@ -82,7 +84,7 @@ export function ClientsSlider() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative overflow-hidden px-12">
+      <div className="relative overflow-hidden px-6 md:px-12">
         <AnimatePresence mode="wait">
           <motion.div 
             key={currentIndex}
@@ -95,7 +97,7 @@ export function ClientsSlider() {
             {visibleClients.map((client, index) => (
               <motion.div
                 key={`${index}-${currentIndex}`}
-                className="w-1/5 flex-shrink-0 px-4"
+                className={`${isMobile ? 'w-1/2' : 'w-1/5'} flex-shrink-0 px-2 md:px-4`}
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ 
@@ -104,16 +106,16 @@ export function ClientsSlider() {
                   stiffness: 300
                 }}
               >
-                <div className="group relative aspect-square overflow-hidden rounded-full bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                <div className="group relative aspect-square overflow-hidden rounded-full bg-white p-4 md:p-6 shadow-sm transition-shadow hover:shadow-md">
                   <Image
                     src={client.logo}
                     alt={client.name}
                     fill
-                    className="object-contain p-4 transition-transform duration-300 group-hover:scale-110"
+                    className="object-contain p-2 md:p-4 transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
-                <div className="mt-4 text-center">
-                  <p className="text-sm font-medium text-muted-foreground">
+                <div className="mt-2 md:mt-4 text-center">
+                  <p className="text-xs md:text-sm font-medium text-muted-foreground">
                     {client.name}
                   </p>
                 </div>
@@ -126,20 +128,20 @@ export function ClientsSlider() {
       <Button
         variant="ghost"
         size="icon"
-        className="absolute -left-4 top-1/3 h-8 w-8 -translate-y-1/2 rounded-full bg-background/80 shadow-sm backdrop-blur-sm hover:bg-background"
+        className="absolute -left-2 md:-left-4 top-1/3 h-6 w-6 md:h-8 md:w-8 -translate-y-1/2 rounded-full bg-background/80 shadow-sm backdrop-blur-sm hover:bg-background"
         onClick={showPrev}
       >
-        <ChevronLeft className="h-4 w-4" />
+        <ChevronLeft className="h-3 w-3 md:h-4 md:w-4" />
         <span className="sr-only">Previous</span>
       </Button>
 
       <Button
         variant="ghost"
         size="icon"
-        className="absolute -right-4 top-1/3 h-8 w-8 -translate-y-1/2 rounded-full bg-background/80 shadow-sm backdrop-blur-sm hover:bg-background"
+        className="absolute -right-2 md:-right-4 top-1/3 h-6 w-6 md:h-8 md:w-8 -translate-y-1/2 rounded-full bg-background/80 shadow-sm backdrop-blur-sm hover:bg-background"
         onClick={showNext}
       >
-        <ChevronRight className="h-4 w-4" />
+        <ChevronRight className="h-3 w-3 md:h-4 md:w-4" />
         <span className="sr-only">Next</span>
       </Button>
     </div>

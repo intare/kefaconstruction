@@ -60,14 +60,14 @@ export function AboutCompany() {
         <div className="space-y-16">
           {/* Header */}
           <div className="text-center">
-            <h2 className="inline-flex items-center gap-4 text-3xl font-bold">
+            <h2 className="flex flex-col items-center gap-2 text-2xl font-bold sm:flex-row sm:gap-4 sm:text-3xl md:text-4xl">
               <span className="text-primary">ABOUT</span>
               <span>Kefa Construction</span>
             </h2>
-            <div className="mx-auto mt-4 flex items-center justify-center gap-2">
-              <div className="h-0.5 w-12 bg-primary" />
-              <div className="h-2 w-2 rounded-full bg-primary" />
-              <div className="h-0.5 w-12 bg-primary" />
+            <div className="mx-auto mt-3 sm:mt-4 flex items-center justify-center gap-2">
+              <div className="h-0.5 w-8 sm:w-12 bg-primary" />
+              <div className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-primary" />
+              <div className="h-0.5 w-8 sm:w-12 bg-primary" />
             </div>
           </div>
 
